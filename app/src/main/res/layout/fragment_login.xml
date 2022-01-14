@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_500">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:text="ავტორიზაცია"
+            android:textColor="#FF9800"
+            android:textSize="35sp" />
+
+        <EditText
+            android:id="@+id/editMail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:ems="10"
+            android:hint="შეიყვანეთ მეილი"
+            android:inputType="textEmailAddress"
+            android:paddingStart="20dp"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@android:drawable/editbox_background_normal"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:ems="10"
+            android:hint="შეიყვანეთ პაროლი"
+            android:inputType="textPassword"
+            android:paddingStart="20dp"
+            android:textAlignment="center" />
+
+
+        <Button
+            android:id="@+id/authorisationButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#FF9800"
+
+            android:text="ავტორიზაცია" />
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="#FF9800"
+            android:text="რეგისტრაცია" />
+
+        <TextView
+            android:id="@+id/recoverPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="პაროლის აღდგენა"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
