@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.afinal.Posts
 import com.example.afinal.R
 
 class RecyclerViewPersonAdapter(private val list: List<Posts>) : RecyclerView.Adapter<RecyclerViewPersonAdapter.PersonViewHolder>() {

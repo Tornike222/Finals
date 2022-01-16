@@ -89,6 +89,7 @@ class LoginFragment: Fragment(R.layout.fragment_login) {
                             Toast.makeText(activity, "თქვენ წარმატებით გაიარეთ ავტორიზაცია", Toast.LENGTH_LONG).show()
                             val intent = Intent(activity, MainActivity2::class.java)
                             startActivity(intent)
+                            activity?.finish()
                         }else{
                             Toast.makeText(activity, "3rror", Toast.LENGTH_LONG).show()
                         }

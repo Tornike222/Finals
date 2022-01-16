@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.afinal.R
 import com.example.afinal.databinding.FragmentRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class RegistrationFragment: Fragment(R.layout.fragment_registration) {
     private lateinit var regButton: Button
@@ -24,6 +25,8 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
     private lateinit var editSurname: EditText
     private var _binding: FragmentRegistrationBinding? = null
     private val binding get() = _binding!!
+    private val auth = FirebaseAuth.getInstance()
+    private val data = FirebaseDatabase.getInstance().getReference("UserInfo")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -82,8 +85,11 @@ class RegistrationFragment: Fragment(R.layout.fragment_registration) {
                     .createUserWithEmailAndPassword(editMail.text.toString(), editPassword.text.toString())
                     .addOnCompleteListener{ task ->
                         if(task.isSuccessful){
+                            data.child(auth.currentUser?.uid!!).child("name").setValue(editName.text.toString()+" "+editSurname.text.toString())
+
                             findNavController().navigate(RegistrationFragmentDirections.actionFragmentRegistrationToFragmentLogin())
                             Toast.makeText(activity, "წარმატებით დარეგისტრირდით!", Toast.LENGTH_SHORT).show()
+
                         }else{
                             Toast.makeText(activity, "3rror", Toast.LENGTH_SHORT).show()
                         }

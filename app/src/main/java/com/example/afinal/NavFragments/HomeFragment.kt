@@ -5,8 +5,8 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.afinal.Posts
 import com.example.afinal.R
-import com.example.myapplication.Posts
 import com.example.myapplication.RecyclerViewPersonAdapter
 
 class HomeFragment: Fragment(R.layout.fragment_home) {
