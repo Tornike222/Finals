@@ -12,9 +12,15 @@
         tools:layout="@layout/fragment_home">
     </fragment>
     <fragment
+        android:id="@+id/newpostFragment"
+        android:name="com.example.afinal.NavFragments.NewpostFragment"
+        android:label="fragment_newpost"
+        tools:layout="@layout/fragment_newpost" />
+    <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.afinal.NavFragments.ProfileFragment"
         android:label="ProfileFragment"
         tools:layout="@layout/fragment_profile">
     </fragment>
+
 </navigation>

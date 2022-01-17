@@ -20,7 +20,8 @@ class MainActivity2 : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
-                R.id.profileFragment
+                R.id.profileFragment,
+                R.id.newpostFragment
                 )
         )
 
