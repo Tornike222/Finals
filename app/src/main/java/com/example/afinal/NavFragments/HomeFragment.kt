@@ -1,6 +1,7 @@
 package com.example.afinal.NavFragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,42 +19,43 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = RecyclerViewPersonAdapter(getData())
         database = FirebaseDatabase.getInstance()
-        referance = database.getReference("Movies")
+        referance = database.getReference("Posts")
+
         getData()
-//        getData()
-//        new()
     }
 
-//    private fun new(){
-//        val list = ArrayList<Posts>()
-//        val db = FirebaseDatabase.getInstance().getReference("Posts").child("1")
-//        db.addValueEventListener (object :ValueEventListener{
-//            override fun onDataChange (snapshot: DataSnapshot) {
-//                if (snapshot.exists()) {
-//                    for (bookSnapshot in snapshot.children) {
-//                 g       val book = bookSnapshot.getValue(Posts::class.java)
-//                        list.add(book!!)
-//                    }
-//                    recyclerView.adapter = RecyclerViewPersonAdapter(list)
-//                }
-//            }
-//            override fun onCancelled(error: DatabaseError) {
-//            }
-//        })
-//    }
+    private fun getData(){
+        referance.addValueEventListener(object  : ValueEventListener{
 
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var list= ArrayList<Posts>()
+                for(data in snapshot.children){
+                    var model = data.getValue(Posts::class.java)
+                    list.add(model as Posts)
+                }
+                if (list.size>0){
+                    val adapter= RecyclerViewPersonAdapter(list)
+                    recyclerView.adapter = adapter
+                }
 
-        private fun getData(): List<Posts> {
-            val list = ArrayList<Posts>()
-            list.add(
-                Posts(
-                    1,
-                    "https://www.myanbiz-consulting.com/wp-content/uploads/2019/04/4214892-news-images.jpg",
-                    "Best news in the world\nfor you"
-                )
-            )
-            return list
-        }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+
+        })
+    }
+
+//        private fun getData(): List<Posts> {
+//            val list = ArrayList<Posts>()
+//            list.add(
+//                Posts(
+//                    1,
+//                    "https://www.myanbiz-consulting.com/wp-content/uploads/2019/04/4214892-news-images.jpg",
+//                    "Best news in the world\nfor you"
+//                )
+//            )
+//            return list
+//        }
 }
