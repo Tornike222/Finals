@@ -15,7 +15,7 @@ import com.example.afinal.databinding.FragmentRegistrationBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
-class RegistrationFragment: Fragment(R.layout.fragment_registration) {
+class RegistrationFragment: Fragment() {
     private lateinit var regButton: Button
     private lateinit var editPassword: EditText
     private lateinit var editPassword2: EditText

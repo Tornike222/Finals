@@ -17,7 +17,7 @@ import com.example.afinal.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
 
-class LoginFragment: Fragment(R.layout.fragment_login) {
+class LoginFragment: Fragment() {
     private lateinit var editMail: EditText
     private lateinit var editPassword: EditText
     private lateinit var authorisationButton: Button

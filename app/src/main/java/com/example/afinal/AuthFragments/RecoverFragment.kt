@@ -13,7 +13,7 @@ import com.example.afinal.R
 import com.example.afinal.databinding.FragmentRecoverBinding
 import com.google.firebase.auth.FirebaseAuth
 
-class RecoverFragment : Fragment(R.layout.fragment_recover) {
+class RecoverFragment : Fragment() {
     private lateinit var editMail: EditText
     private lateinit var sendButton: Button
     private var _binding: FragmentRecoverBinding? = null
@@ -43,22 +43,21 @@ class RecoverFragment : Fragment(R.layout.fragment_recover) {
     fun sendButtonListeners(){
         sendButton.setOnClickListener{
             val mail = editMail.text.toString()
-            if (mail.isEmpty()){
-                Toast.makeText(activity,"მეილის ჩასაწერი ადგილი ცარიელია",Toast.LENGTH_SHORT).show()
-            }
-
-            FirebaseAuth.getInstance().sendPasswordResetEmail(mail)
-                .addOnCompleteListener{ task ->
-                    if(task.isSuccessful){
-                        Toast.makeText(activity,"პაროლის აღსადგენი ლინკი მეილზე გამოგზავნილია",Toast.LENGTH_SHORT).show()
-                        findNavController().navigate(RecoverFragmentDirections.actionFragmentRecoverToFragmentLogin())
-                    }else{
-                        Toast.makeText(activity,"3rror",Toast.LENGTH_SHORT).show()
+            if (mail.isNotEmpty()) {
+                FirebaseAuth.getInstance().sendPasswordResetEmail(mail)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful && mail.isNotEmpty()) {
+                            Toast.makeText(
+                                activity,
+                                "პაროლის აღსადგენი ლინკი მეილზე გამოგზავნილია",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            findNavController().navigate(RecoverFragmentDirections.actionFragmentRecoverToFragmentLogin())
+                        } else {
+                            Toast.makeText(activity, "3rror", Toast.LENGTH_SHORT).show()
+                        }
                     }
                 }
-
-
+            }
         }
     }
-
-}
