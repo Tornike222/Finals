@@ -70,12 +70,12 @@ class ProfileFragment: Fragment(){
             if(newPassword.isNotEmpty() && newPassword.length > 7){
                 FirebaseAuth.getInstance().currentUser?.updatePassword(newPassword)?.addOnCompleteListener(){ task ->
                     if(task.isSuccessful){
-                        Toast.makeText(activity, "თქვენ წარმატებით შეცვალეთ პაროლი", Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "Password Is Changed Successfully", Toast.LENGTH_LONG).show()
                     }
                 }
             }
             if(newPassword.length > 0 && newPassword.length <= 7){
-                Toast.makeText(activity, "პაროლი უნდა შედგებოდეს მინიმუმ 8 სიმბოლოსგან", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Password Must Contains Least 8 Symbols", Toast.LENGTH_LONG).show()
             }
 
 

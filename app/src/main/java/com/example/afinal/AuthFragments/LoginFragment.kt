@@ -71,22 +71,22 @@ class LoginFragment: Fragment() {
             val password = editPassword.text.toString()
 
             if(editMail.text.isEmpty()){
-                Toast.makeText(activity, "Mail-ის ჩასაწერი ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Mail Area Is Empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
             else if(editMail.text.contains("@") == false){
-                Toast.makeText(activity, "შეამოწმე მეილი", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Check the correctness of the mail", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }
             else if(editPassword.text.isEmpty()) {
-                Toast.makeText(activity, "პაროლის ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Password Area Is Empty", Toast.LENGTH_LONG).show()
                 return@setOnClickListener
             }else{
                 FirebaseAuth.getInstance()
                     .signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener{ task ->
                         if (task.isSuccessful){
-                            Toast.makeText(activity, "თქვენ წარმატებით გაიარეთ ავტორიზაცია", Toast.LENGTH_LONG).show()
+                            Toast.makeText(activity, "You Successfully Are In", Toast.LENGTH_LONG).show()
                             val intent = Intent(activity, MainActivity::class.java)
                             startActivity(intent)
                             activity?.finish()

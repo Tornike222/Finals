@@ -3,49 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".NavFragments.NewpostFragment">
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NewPost"
-        android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_above="@id/form"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:layout_height="150dp"
+        android:background="@drawable/buttonstyle"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/form"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:paddingVertical="30dp"
+            android:text="New Post"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:padding="35dp"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="320dp"
+        android:background="@drawable/buttonstyle_linear_login"
+        android:orientation="vertical"
+        android:padding="40dp">
 
         <EditText
             android:id="@+id/editTextNewPost"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:inputType="textPersonName"
             android:background="@drawable/rounded_border"
-            android:hint="ურჩიე"
-            android:paddingHorizontal="15dp"/>
+            android:hint="Give Advice"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="20dp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="15dp"
+            android:text="Enter the text of the post you want to make public in the field and click on the button"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/buttonPost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingVertical="10dp"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/buttonstyle"
-            android:textSize="18sp"
-            android:text="დაპოსტვა"
-            android:layout_gravity="center"/>
+            android:paddingVertical="10dp"
+            android:text="Post"
+            android:textSize="18sp" />
 
     </LinearLayout>
 

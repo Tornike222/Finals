@@ -44,15 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="50dp"
-            android:text="პაროლის აღდგენა"
+            android:text="Password Recovery"
             android:textColor="#2196F3"
             android:textSize="35sp" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="მეილზე გამოგეგზავნებათ ლინკი, რომლის მეშვეობითაც შეძლებთ პაროლის აღდგენას" />
 
         <EditText
             android:id="@+id/editMail"
@@ -62,10 +56,18 @@
             android:background="@drawable/rounded_border"
             android:drawableLeft="@android:drawable/sym_action_email"
             android:ems="10"
-            android:hint="შეიყვანეთ მეილი"
+            android:hint="Enter E-Mail"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:text="A link will be sent to you by e-mail, through which you will be able to reset your password" />
 
         <Button
             android:id="@+id/sendButton"
@@ -75,6 +77,6 @@
             android:layout_marginTop="40dp"
             android:background="@drawable/buttonstyle"
             android:textSize="16sp"
-            android:text="კოდის გაგზავნა" />
+            android:text="Send " />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

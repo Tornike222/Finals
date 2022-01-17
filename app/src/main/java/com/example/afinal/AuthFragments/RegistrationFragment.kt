@@ -58,28 +58,28 @@ class RegistrationFragment: Fragment() {
     fun regButtonListeners(){
         regButton.setOnClickListener {
             if(editName.text.isEmpty()){
-                Toast.makeText(activity, "სახელის ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Name Area Is Empty", Toast.LENGTH_LONG).show()
             }
             else if(editSurname.text.isEmpty()){
-                Toast.makeText(activity, "გვარის ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Surname Area Is Empty", Toast.LENGTH_LONG).show()
             }
             else if(editPassword.text.isEmpty()){
-                Toast.makeText(activity, "პაროლის ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Password Area Is Empty", Toast.LENGTH_LONG).show()
             }
             else if(editPassword2.text.isEmpty()) {
-                Toast.makeText(activity, "მეორედ ჩასაწერი პაროლის ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Repeat Password Area Is Empty", Toast.LENGTH_LONG).show()
             }
             else if(editMail.text.isEmpty()){
-                Toast.makeText(activity, "Mail-ის ჩასაწერი ველი ცარიელია", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Mail Area Is Empty", Toast.LENGTH_LONG).show()
             }
             else if(editMail.text.contains("@") == false){
-                Toast.makeText(activity, "შეამოწმე მეილი", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Check the correctness of the mail", Toast.LENGTH_LONG).show()
             }
             else if(editPassword.text.toString() != editPassword2.text.toString()) {
-                Toast.makeText(activity, "შეყვანილი პაროლები ერთმანეთს არ ემთხვევა", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "The passwords entered do not match", Toast.LENGTH_LONG).show()
             }
             else if(!acceptedCheck.isChecked){
-                Toast.makeText(activity, "დაეთანხმეთ წესებს CheckBox ის მონიშვნით", Toast.LENGTH_LONG).show()
+                Toast.makeText(activity, "Agree to the rules by checking the CheckBox", Toast.LENGTH_LONG).show()
             }else{
                 FirebaseAuth.getInstance()
                     .createUserWithEmailAndPassword(editMail.text.toString(), editPassword.text.toString())
@@ -88,7 +88,7 @@ class RegistrationFragment: Fragment() {
                             data.child(auth.currentUser?.uid!!).child("name").setValue(editName.text.toString()+" "+editSurname.text.toString())
 
                             findNavController().navigate(RegistrationFragmentDirections.actionFragmentRegistrationToFragmentLogin())
-                            Toast.makeText(activity, "წარმატებით დარეგისტრირდით!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(activity, "Successfully Registered!", Toast.LENGTH_SHORT).show()
 
                         }else{
                             Toast.makeText(activity, "3rror", Toast.LENGTH_SHORT).show()

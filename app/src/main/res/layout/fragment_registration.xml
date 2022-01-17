@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="რეგისტრაცია"
+            android:text="REGISTRATION"
             android:textColor="#08289E"
             android:textSize="35sp"
             android:textStyle="bold" />
@@ -65,7 +65,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/rounded_border"
                 android:ems="10"
-                android:hint="სახელი"
+                android:hint="Name"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -77,7 +77,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/rounded_border"
                 android:ems="10"
-                android:hint="გვარი"
+                android:hint="Surname"
                 android:inputType="textPersonName"
                 android:textAlignment="center" />
 
@@ -92,7 +92,7 @@
             android:background="@drawable/rounded_border"
             android:drawableLeft="@android:drawable/ic_dialog_email"
             android:ems="10"
-            android:hint="შეიყვანეთ თქვენი e-Mail"
+            android:hint="Enter E-Mal"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:textAlignment="center" />
@@ -107,7 +107,7 @@
             android:background="@drawable/rounded_border"
             android:drawableLeft="@android:drawable/ic_lock_lock"
             android:ems="10"
-            android:hint="შეიყვანეთ პაროლი"
+            android:hint="Enter Password"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:textAlignment="center" />
@@ -121,7 +121,7 @@
             android:background="@drawable/rounded_border"
             android:drawableLeft="@android:drawable/ic_lock_lock"
             android:ems="10"
-            android:hint="გაიმეორეთ პაროლი"
+            android:hint="Repeat Password"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:textAlignment="center" />
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="ვეთანხმები აპლიკაციის წესებსა და პირობებს"
+            android:text="I agree to the terms and conditions of the application"
             android:textColor="#8E8E8E"
             android:textStyle="bold" />
 
@@ -144,7 +144,7 @@
             android:layout_marginTop="40dp"
             android:background="@drawable/buttonstyle"
 
-            android:text="რეგისტრაცია" />
+            android:text="Sign Up" />
 
 
     </LinearLayout>

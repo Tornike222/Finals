@@ -47,17 +47,16 @@ class RecoverFragment : Fragment() {
                 FirebaseAuth.getInstance().sendPasswordResetEmail(mail)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful && mail.isNotEmpty()) {
-                            Toast.makeText(
-                                activity,
-                                "პაროლის აღსადგენი ლინკი მეილზე გამოგზავნილია",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            Toast.makeText(activity, "Password Recovery Link Is Sent On Your Mail ", Toast.LENGTH_SHORT).show()
                             findNavController().navigate(RecoverFragmentDirections.actionFragmentRecoverToFragmentLogin())
                         } else {
                             Toast.makeText(activity, "3rror", Toast.LENGTH_SHORT).show()
                         }
                     }
-                }
+                }else{
+                Toast.makeText(activity, "Mail Space is Empty", Toast.LENGTH_SHORT).show()
+
+            }
             }
         }
     }

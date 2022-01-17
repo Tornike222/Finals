@@ -46,16 +46,4 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         })
     }
-
-//        private fun getData(): List<Posts> {
-//            val list = ArrayList<Posts>()
-//            list.add(
-//                Posts(
-//                    1,
-//                    "https://www.myanbiz-consulting.com/wp-content/uploads/2019/04/4214892-news-images.jpg",
-//                    "Best news in the world\nfor you"
-//                )
-//            )
-//            return list
-//        }
 }

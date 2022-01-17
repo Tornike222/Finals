@@ -62,7 +62,7 @@ class NewpostFragment : Fragment() {
                         val id = data.push().key
                         data.child(id.toString()).child("title").setValue(postText)
                         data.child(id.toString()).child("imageUrl").setValue(imageUrl.toString())
-                        Toast.makeText(activity, "პოსტი განთავსდა", Toast.LENGTH_LONG).show()
+                        Toast.makeText(activity, "The post is published", Toast.LENGTH_LONG).show()
                     }
                 }
             }
