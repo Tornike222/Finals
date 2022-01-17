@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:text="Saxeli Gvari"
+                android:text="Name Surname"
                 android:textColor="@color/white"
                 android:textSize="21sp"
                 android:textStyle="bold" />
@@ -50,6 +50,7 @@
             android:layout_marginTop="320dp"
             android:background="@drawable/rounded_border"
             android:ems="10"
+            android:gravity="center"
             android:hint="Change Name"
             android:inputType="textPersonName"
             android:paddingStart="15sp" />
@@ -62,6 +63,7 @@
             android:layout_marginTop="370dp"
             android:background="@drawable/rounded_border"
             android:ems="10"
+            android:gravity="center"
             android:hint="Upload Photo URL"
             android:inputType="textPersonName"
             android:paddingStart="15sp" />
@@ -74,6 +76,7 @@
             android:layout_marginTop="420dp"
             android:background="@drawable/rounded_border"
             android:ems="10"
+            android:gravity="center"
             android:hint="Change Password"
             android:inputType="textPassword"
             android:paddingStart="15sp" />
@@ -85,7 +88,8 @@
             android:layout_marginStart="155dp"
             android:layout_marginTop="470dp"
             android:background="@drawable/buttonstyle"
-            android:text="შენახვა"
+            android:gravity="center"
+            android:text="Save"
             android:textColor="@color/white" />
 
         <Button

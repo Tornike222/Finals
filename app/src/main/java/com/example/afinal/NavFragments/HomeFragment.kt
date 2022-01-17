@@ -11,7 +11,7 @@ import com.example.afinal.R
 import com.example.myapplication.RecyclerViewPersonAdapter
 import com.google.firebase.database.*
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var database: FirebaseDatabase
     private lateinit var referance: DatabaseReference
 
