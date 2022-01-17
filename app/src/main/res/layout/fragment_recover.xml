@@ -70,10 +70,11 @@
         <Button
             android:id="@+id/sendButton"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
             android:layout_marginTop="40dp"
             android:background="@drawable/buttonstyle"
-
+            android:textSize="16sp"
             android:text="კოდის გაგზავნა" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

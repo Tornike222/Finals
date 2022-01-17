@@ -46,6 +46,7 @@
             android:id="@+id/editPersonName"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="110dp"
             android:layout_marginTop="320dp"
             android:background="@drawable/rounded_border"
@@ -53,12 +54,13 @@
             android:gravity="center"
             android:hint="Change Name"
             android:inputType="textPersonName"
-            android:paddingStart="15sp" />
+            android:paddingHorizontal="20dp" />
 
         <EditText
             android:id="@+id/editPersonPhoto"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="110dp"
             android:layout_marginTop="370dp"
             android:background="@drawable/rounded_border"
@@ -72,6 +74,7 @@
             android:id="@+id/editPersonPassword"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="110dp"
             android:layout_marginTop="420dp"
             android:background="@drawable/rounded_border"
@@ -85,6 +88,8 @@
             android:id="@+id/buttonSave"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:layout_centerInParent="false"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="155dp"
             android:layout_marginTop="470dp"
             android:background="@drawable/buttonstyle"
@@ -92,14 +97,14 @@
             android:text="Save"
             android:textColor="@color/white" />
 
-        <Button
+
+        <ImageView
             android:id="@+id/buttonLogout"
-            android:layout_width="450dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="550dp"
-            android:background="@drawable/buttonstyle"
-            android:text="გასვლა" />
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_baseline_exit_to_app_24" />
 
     </RelativeLayout>
 

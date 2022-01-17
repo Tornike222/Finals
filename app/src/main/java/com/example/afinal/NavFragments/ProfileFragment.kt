@@ -26,7 +26,7 @@ class ProfileFragment: Fragment(){
     private lateinit var editPersonPhoto: EditText
     private lateinit var editPersonPassword: EditText
     private lateinit var buttonSave: Button
-    private lateinit var buttonLogout:Button
+    private lateinit var buttonLogout:ImageView
     private val auth = FirebaseAuth.getInstance()
     private val data = FirebaseDatabase.getInstance().getReference("UserInfo")
 
