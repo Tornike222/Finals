@@ -53,16 +53,15 @@ class NewpostFragment : Fragment() {
     }
 
     private fun newpost() {
-        var id = 1
         buttonPost.setOnClickListener() {
             dataa.child(auth.currentUser?.uid!!).get().addOnSuccessListener {
                 if (it.exists()) {
                     val imageUrl = it.child("photoUrl").value
                     val postText = editTextNewPost.text.toString()
                     if (postText.isNotEmpty()) {
+                        val id = data.push().key
                         data.child(id.toString()).child("title").setValue(postText)
                         data.child(id.toString()).child("imageUrl").setValue(imageUrl.toString())
-                        id += 1
                         Toast.makeText(activity, "პოსტი განთავსდა", Toast.LENGTH_LONG).show()
                     }
                 }
