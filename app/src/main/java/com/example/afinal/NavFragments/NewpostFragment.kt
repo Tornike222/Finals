@@ -59,11 +59,13 @@ class NewpostFragment : Fragment() {
                 if (it.exists()) {
                     val imageUrl = it.child("photoUrl").value
                     val postText = editTextNewPost.text.toString()
-                    if (postText.isNotEmpty()) {
+                    if (postText.isNotEmpty() && postText.length < 86) {
                         data.child(id.toString()).child("title").setValue(postText)
                         data.child(id.toString()).child("imageUrl").setValue(imageUrl.toString())
                         id += 1
                         Toast.makeText(activity, "პოსტი განთავსდა", Toast.LENGTH_LONG).show()
+                    }else{
+                        Toast.makeText(activity, "მაქსიმალური სიმბოლოების რაოდენობაა 85", Toast.LENGTH_LONG).show()
                     }
                 }
             }

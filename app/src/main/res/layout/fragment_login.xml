@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500">
+    android:background="@drawable/gradientbackground2">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -61,6 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_marginTop="40dp"
+            android:background="@drawable/buttonstyle"
             android:backgroundTint="#FF9800"
 
             android:text="ავტორიზაცია" />
@@ -69,6 +70,8 @@
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonstyle"
             android:backgroundTint="#FF9800"
             android:text="რეგისტრაცია" />
 
@@ -76,8 +79,9 @@
             android:id="@+id/recoverPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:text="პაროლის აღდგენა"
-            android:textColor="@color/white"/>
+            android:textColor="#FFFFFF" />
 
 
     </LinearLayout>
