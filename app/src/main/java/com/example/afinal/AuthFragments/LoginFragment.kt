@@ -11,8 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.afinal.MainActivity
-import com.example.afinal.R
+import com.example.afinal.MainActivity2
 import com.example.afinal.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -87,7 +86,7 @@ class LoginFragment: Fragment() {
                     .addOnCompleteListener{ task ->
                         if (task.isSuccessful){
                             Toast.makeText(activity, "თქვენ წარმატებით გაიარეთ ავტორიზაცია", Toast.LENGTH_LONG).show()
-                            val intent = Intent(activity, MainActivity::class.java)
+                            val intent = Intent(activity, MainActivity2::class.java)
                             startActivity(intent)
                             activity?.finish()
                         }else{
