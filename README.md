@@ -22,9 +22,10 @@ FitON requires Android studio
 
 Clone Git and that's it
 
-## License
+## Authors
 
-MIT
+Tornike Elkanishvili
+George Qurdadze
 
 **Free Software, Hell Yeah!**
 
