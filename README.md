@@ -25,6 +25,7 @@ Clone Git and that's it
 ## Authors
 
 Tornike Elkanishvili
+
 George Qurdadze
 
 **Free Software, Hell Yeah!**
