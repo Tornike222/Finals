@@ -26,8 +26,6 @@ Clone Git and that's it
 
 Tornike Elkanishvili
 
-George Qurdadze
-
 **Free Software, Hell Yeah!**
 
 
