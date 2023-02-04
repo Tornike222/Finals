@@ -3,7 +3,7 @@
 
 
 
-FitON is the application that helps each other to share your thoughts, ideas, exercises about healthy lifestyle to each other around the world
+FitON is the application that helps people to share their thoughts, ideas, exercises about healthy lifestyle to each other around the world
 
 ## Features
 
